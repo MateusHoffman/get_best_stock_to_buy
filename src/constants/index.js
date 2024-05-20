@@ -1,0 +1,1 @@
+export const pwd = "/home/hoffman/Documentos/My/get_best_stock_to_buy"
