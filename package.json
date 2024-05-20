@@ -1,0 +1,13 @@
+{
+  "name": "get_best_stock_to_buy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "repository": "git@github.com:MateusHoffman/get_best_stock_to_buy.git",
+  "author": "Hoffman <mateus.hsilva@muu.agr.br>",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "moment": "^2.30.1"
+  }
+}
