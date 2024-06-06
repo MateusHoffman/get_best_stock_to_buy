@@ -11,7 +11,7 @@ export default async function getAllStocks() {
     Array.isArray(stocksJson) &&
     updatedAtJson === moment().format("DD/MM/YYYY")
   ) {
-    return stocksJson
+    return stocksJson;
   } else {
     const allTickers = await getAllTickers();
     console.log("Total de Tickers:", allTickers.length);
@@ -21,7 +21,11 @@ export default async function getAllStocks() {
     for (const [index, ticker] of allTickers.entries()) {
       console.log(`Falta ${allTickers.length - index} de ${allTickers.length}`);
       const stock = await getStockData(ticker);
-      if (stock?.currentPrice && stock?.dividendHistoryLast10Years) {
+      if (
+        stock?.currentPrice &&
+        stock?.dividendHistoryLast10Years &&
+        stock?.hasProfitLast10Years
+      ) {
         allValidStocks.push(stock);
       }
     }
